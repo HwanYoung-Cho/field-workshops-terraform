@@ -42,7 +42,7 @@ name: Introductions
 # 참여자 소개 시간
 - 이름 :
 - 직책 :
-- 경험 공유 :
+- 인프라 자동화 경험 공유 :
 
 ???
 이 슬라이드를 사용하여 자신을 소개하고 배경 이야기를 약간 제공 한 다음 모든 참가자가 자신을 소개하도록합니다.
@@ -57,7 +57,7 @@ name: Introductions
 name: Link-to-Slide-Deck
 # The Slide Deck
 <br><br><br>
-Follow along on your own computer at this link:
+Intro to Terraform on AWS slide
 
 ### <https://git.io/JToiE>
 
@@ -95,7 +95,7 @@ class: title
 name: How-to-Provision-an-AWS-Instance
 # AWS 인스턴스를 어떻게 프로비저닝 하죠?
 
-새 AWS 인스턴스를 프로비저닝 할 수있는 몇 가지 다른 방법을 살펴 보겠습니다. 시작하기 전에 다음을 포함한 몇 가지 기본 정보를 수집해야합니다 (더 많은 예가 있습니다).
+새 AWS 인스턴스를 프로비저닝 할 수있는 몇 가지 다른 방법을 살펴 보겠습니다. 시작하기 전에 다음을 포함한 몇 가지 기본 정보를 수집해야합니다. (더 많은 정보가 필요할 수 있습니다.)
 
 - EC2 인스턴스 이름
 - 운영 체제 (Image)
@@ -144,7 +144,7 @@ class: compact
     },
 ```
 
-CloudFormation 템플릿은 AWS 리소스를 프로비저닝하는 일관되고 안정적인 방법을 제공합니다. JSON은 컴퓨터가 읽기 쉽지만, 사람이 편집하고 문제를 해결하기에는 어떤가요?
+CloudFormation 템플릿은 AWS 리소스를 프로비저닝하는 일관되고 안정적인 방법을 제공합니다. JSON은 컴퓨터가 읽기 쉽지만, 사람이 편집하고 문제를 해결하기에는 어려울 수 있습니다.
 
 ???
  **CFT라고도하는 방법 # 2 인 CloudFormation 템플릿을 소개합니다. CFT를 사용한 적이 있습니까? 그 경험은 어떻습니까?**
@@ -165,7 +165,6 @@ resource aws_instance "web" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
 
-  // Name of an existing EC2 KeyPair to enable SSH access to the instance
   tags = {
     Name = "HelloWorld"
   }
@@ -190,10 +189,10 @@ resource aws_instance "catapp" {
   }
 ```
 * 실행 가능한 문서
-* 인간과 기계 모두 해독 가능
+* 사람과 기계가 모두 읽을 수 있음
 * 배우기 쉬움
 * 테스트, 공유, 재사용, 자동화
-* 모든 주요 클라우드 제공 업체에서 작동 가능
+* 모든 주요 클라우드 환경에서 작동 가능
 
 ???
 그래서 정확히 Terraform은 무엇입니까? Terraform은 하이브리드 인프라의 DNA입니다. Terraform 코드는 HCL 또는 HashiCorp 구성 언어로 작성됩니다. 모든 플랫폼에서 인프라 프로비저닝을 위해 특별히 설계된 유일한 프로그래밍 언어입니다.
