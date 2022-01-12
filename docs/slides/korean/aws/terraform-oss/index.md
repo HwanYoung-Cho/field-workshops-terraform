@@ -207,8 +207,7 @@ name: IaC
 # What is Infrastructure as Code?
 <br><br><br>
 .biglist[
-
-**IaC (Infrastructure as Code)는 컴퓨터에서 읽을 수있는 정의 파일을 사용하여 클라우드 인프라를 관리하고 프로비저닝하는 프로세스입니다.**
+IaC (Infrastructure as Code)는 컴퓨터에서 읽을 수있는 정의 파일을 사용하여 클라우드 인프라를 관리하고 프로비저닝하는 프로세스입니다.
 
 **실행 가능한 '문서'라고 생각하시면 됩니다.**
 ]
